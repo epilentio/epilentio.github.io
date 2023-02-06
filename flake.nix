@@ -1,31 +1,56 @@
 {
-  description = "epilentio website";
+  description = "marijan's website";
 
   inputs = {
-    flake-utils.url = "github:numtide/flake-utils";
-    haskellNix.url = "github:input-output-hk/haskell.nix";
-    nixpkgs.follows = "haskellNix/nixpkgs-2111";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    horizon-platform.url = "git+https://gitlab.homotopic.tech/horizon/horizon-platform?rev=046c7305362aa0b3445539f9d78e648dd65167b7";
+    horizon-platform.inputs.nixpkgs.follows = "nixpkgs";
+    flake-parts.url = "github:hercules-ci/flake-parts";
+    treefmt-nix.url = "github:numtide/treefmt-nix";
   };
 
-  outputs = { self, flake-utils, nixpkgs, haskellNix }:
-    flake-utils.lib.eachSystem [ "x86_64-linux" ] (system:
-      let
-        overlays = [ haskellNix.overlay (final: prev: {
-          epilentio = final.haskell-nix.cabalProject {
-            src = ./.;
-            compiler-nix-name = "ghc8107";
-            shell.tools = {
-              cabal = {};
-              hlint = {};
-              haskell-language-server = {};
+  outputs = inputs@{ self, flake-parts, treefmt-nix, ... }:
+    flake-parts.lib.mkFlake { inherit inputs; } {
+      systems = [ "x86_64-linux" ];
+      imports = [
+        treefmt-nix.flakeModule
+      ];
+      perSystem = { config, self', inputs', pkgs, system, ... }:
+        let
+          haskellPackages =
+            with pkgs.haskell.lib.compose; inputs'.horizon-platform.legacyPackages.extend
+              (self: _: {
+                website = self.callCabal2nix "epilentio" ./. { };
+              });
+        in
+        {
+          treefmt = {
+            projectRootFile = ".git/config";
+            programs.nixpkgs-fmt.enable = true;
+            programs.cabal-fmt.enable = true;
+            settings.formatter = {
+              "fourmolu" = {
+                command = pkgs.haskellPackages.fourmolu;
+                options = [
+                  "--ghc-opt"
+                  "-XImportQualifiedPost"
+                  "--ghc-opt"
+                  "-XTypeApplications"
+                  "--mode"
+                  "inplace"
+                  "--check-idempotence"
+                ];
+                includes = [ "*.hs" ];
+              };
             };
+
           };
-        })];
-        pkgs = import nixpkgs { inherit system overlays; };
-        flake = pkgs.epilentio.flake { };
-      in flake // {
-        devShells.default = flake.devShell;
-        defaultPackage = flake.packages."epilentio:exe:site";
-      }
-    );
+          packages.default = haskellPackages.website;
+          devShells.default = haskellPackages.shellFor {
+            packages = p: [ p.website ];
+            withHoogle = false;
+            nativeBuildInputs = [ config.treefmt.build.wrapper ];
+          };
+        };
+    };
 }
