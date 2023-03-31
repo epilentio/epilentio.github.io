@@ -1,0 +1,19 @@
+main {
+}
+
+main section{
+  margin-top: 1rem !important;
+}
+
+.carousel-item img {  
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+  height:60vh;
+}
+
+.img-tech {
+    height: 200px;
+    width: auto; /* You can set the dimensions to whatever you want */
+    object-fit: scale-down;
+}

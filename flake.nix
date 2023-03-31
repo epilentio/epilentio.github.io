@@ -1,5 +1,5 @@
 {
-  description = "marijan's website";
+  description = "The website of Epilentio d.o.o.";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -7,6 +7,7 @@
     horizon-platform.inputs.nixpkgs.follows = "nixpkgs";
     flake-parts.url = "github:hercules-ci/flake-parts";
     treefmt-nix.url = "github:numtide/treefmt-nix";
+    treefmt-nix.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = inputs@{ self, flake-parts, treefmt-nix, ... }:
@@ -49,7 +50,7 @@
           devShells.default = haskellPackages.shellFor {
             packages = p: [ p.website ];
             withHoogle = false;
-            nativeBuildInputs = [ config.treefmt.build.wrapper ];
+            nativeBuildInputs = [ ];
           };
         };
     };
