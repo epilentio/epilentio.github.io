@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    $if(description)$
+    <meta name="description" content="$description$" />
+    $endif$
+    <title>epilentio.hr - $title$</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <script defer src="/js/fontawesome.min.js"></script>
+  </head>
+  <body>
+    <div class="max-w-5xl mx-auto">
+      <header>
+        <nav class="navbar bg-base-100">
+          <a class="btn btn-ghost normal-case text-xl" href="/index.html">
+            <img class="" src="/images/epilentio32.png" alt="epilentio.hr" />
+            Epilentio
+          </a>
+          <ul class="menu menu-horizontal">
+            <li>
+              <a href="/pages/software-devops-consulting.html"
+                >Software Engineering and DevOps Consulting</a
+              >
+            </li>
+            <li>
+              <details>
+                <summary>Apartments for Rent</summary>
+                <ul class="bg-base-200">
+                  <li>
+                    <a href="/pages/vacation-apartments.html">For Vacation</a>
+                  </li>
+                  <li>
+                    <a href="/pages/digital-nomads.html">For Digital Nomads</a>
+                  </li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div>$body$</div>
+      </main>
+      <div class="divider"></div>
+      <footer class="footer text-neutral-content p-4">
+        <aside>
+          <header class="footer-title">Company</header>
+          $partial("templates/legal-information.html")$
+        </aside>
+        <div>
+          <header class="footer-title">Social</header>
+          <ul class="space-y-2">
+            <li>
+              <a href="https://linktr.ee/epilentio" class="text-sm"
+                ><i class="fa-brands fa-airbnb"></i> Book your Apartment now</a
+              >
+            </li>
+            <li>
+              <a href="https://instagram.com/epilentio" class="text-sm"
+                ><i class="fa-brands fa-instagram"></i> Follow us on
+                Instagram</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <header class="footer-title">Contact us</header>
+          <ul class="space-y-2">
+            <li>
+              <a href="https://wa.me/385953136831" class="text-sm"
+                ><i class="fa-brands fa-whatsapp"></i> Text us on WhatsApp</a
+              >
+            </li>
+            <li>
+              <a href="tel:+385953136831" class="text-sm"
+                ><i class="fa-solid fa-phone"></i> +385 95 3136 831</a
+              >
+            </li>
+            <li>
+              <a
+                href="mailto:petricevic@epilentio.hr?subject=Request&body=Poruka"
+                class="text-sm"
+                ><i class="fa-solid fa-envelope"></i> petricevic@epilentio.hr</a
+              >
+            </li>
+          </ul>
+        </div>
+      </footer>
+      <footer class="footer footer-center text-neutral-content p-4">
+        <p>Copyright © 2023 - All right reserved by Epilentio d.o.o.</p>
+      </footer>
+    </div>
+  </body>
+</html>
