@@ -12,13 +12,12 @@
   };
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    flake-parts.url = "github:hercules-ci/flake-parts";
-    treefmt-nix.url = "github:numtide/treefmt-nix";
-    treefmt-nix.inputs.nixpkgs.follows = "nixpkgs";
+    website-builder.url = "git+https://git.sr.ht/~marijan/website-builder";
+    nixpkgs.follows = "website-builder/nixpkgs";
+    flake-parts.follows = "website-builder/flake-parts";
+    treefmt-nix.follows = "website-builder/treefmt-nix";
     npmlock2nix.url = "github:nix-community/npmlock2nix";
     npmlock2nix.flake = false;
-    website-builder.url = "git+https://git.sr.ht/~marijan/website-builder";
   };
 
   outputs = inputs@{ self, flake-parts, treefmt-nix, ... }:
