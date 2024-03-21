@@ -2548,6 +2548,18 @@ html {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+@font-face{
+  font-display:swap;
+
+  font-family:'Cinzel';
+
+  font-style:normal;
+
+  font-weight:400;
+
+  src:url('../fonts/cinzel-v23-latin-regular.woff2') format('woff2')
+}
+
 @media (min-width: 768px) {
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
