@@ -1,156 +1,199 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
-    <meta name="description" content="Your Trusted Software Engineering and DevOps Consultancy in Croatia based in the greater Split area, Epilentio engineers reliable, regression-free software solutions. From rapid prototypes to production-ready software, we're your partners in success." />
-    
-    <title>epilentio.hr - Home</title>
-    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="./css/style.css" />
-    <script defer src="./js/fontawesome.min.js"></script>
-    <script src="https://epilentio.hr/js/analytics.js"></script>
-    <script src="https://analytics.marijan.pro/matomo.js" async defer></script>
-    <script src="./js/theme-state.js"></script>
-  </head>
-  <body>
-    <div class="max-w-5xl mx-auto">
-      <header>
-        <nav class="navbar bg-base-100">
-          <a class="btn btn-ghost normal-case text-xl" href="./index.html" style="font-family: 'Cinzel', sans-serif;">
-            EpilentiO
-          </a>
-          <ul class="menu menu-horizontal">
-            <li>
-              <a href="./pages/software-devops-consulting.html">Software Engineering and DevOps Consulting</a>
-            </li>
-            <li>
-              <details>
-                <summary>Apartments for Rent</summary>
-                <ul class="bg-base-200">
-                  <li>
-                    <a href="./pages/vacation-apartments.html">For Vacation</a>
-                  </li>
-                  <li>
-                    <a href="./pages/digital-nomads.html">For Digital Nomads</a>
-                  </li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <label class="swap swap-rotate">
-                <!-- this hidden checkbox controls the state -->
-                <input id="themeController" onclick="saveThemeState()" type="checkbox" class="theme-controller" value="dim" />
-                <!-- moon icon -->
-                <svg class="swap-on fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"></path></svg>
-                <!-- sun icon -->
-                <svg class="swap-off fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"></path></svg>
-              </label>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <main>
-        <div><div>
-  <section id="consulting" class="p-4">
-  <div class="grid md:grid-cols-2 gap-2 h-full flex items-center">
-    <img src="./images/freelancing.svg" alt="contracting artwork" />
-    <div>
-      <h1 class="text-2xl font-bold">
-        At Epilentio we engineer reliable and regression-free software solutions
-        for your ideas.
-      </h1>
-      <p>
-        It doesn't matter whether you need a rapidly developed software and/or
-        hardware prototype, a production ready software solution, or
-        consultation throughout your project.
-      </p>
+<html lang="en" itemscope="" itemtype="http://schema.org/WebPage">
+ <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="alternate" type="application/atom+xml" title="epilentio" href="/posts/feed.atom">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="preload" href="/images/icons.svg" as="image" type="image/svg+xml">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="/css/syntax.css">
+  <script src="/js/analytics.js"></script>
+  <script src="https://analytics.marijan.pro/matomo.js" async="" defer=""></script>
+  <script src="/js/theme-state.js"></script>
+  <script defer="" src="/js/fontawesome.min.js"></script>
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <meta name="robots" content="noai, noimageai">
+  <title>
+   At Epilentio we engineer reliable and regression-free software solutions
+          for your ideas. - epilentio
+  </title>
+  <link rel="canonical" href="https://epilentio.hr/">
+ </head>
+ <body>
+  <header class="bg-base-100">
+   <div class="max-w-3xl m-auto">
+    <nav class="navbar">
+     <div class="navbar-start">
+      <a class="btn btn-ghost normal-case text-xl" href="/" style="font-family: 'Cinzel', sans-serif;">
+                EpilentiO
+              </a>
+      <ul class="menu menu-horizontal">
+       <li>
+        <a href="/">Software Engineering</a>
+       </li>
+       <li>
+        <details>
+         <summary>
+          Rental Apartments
+         </summary>
+         <ul class="bg-base-200">
+          <li>
+           <a href="/apartments-for-vacations/">For Vacations</a>
+          </li>
+          <li>
+           <a href="/apartments-for-nomads/">For Digital Nomads</a>
+          </li>
+         </ul>
+        </details>
+       </li>
+      </ul>
+     </div>
+     <div class="navbar-end">
+      <div>
+       <ul class="menu menu-horizontal text-xl">
+        <li>
+         <a href="https://linktr.ee/epilentio" class="text-s"><i class="fa-brands fa-airbnb"></i></a>
+        </li>
+        <li>
+         <a href="https://instagram.com/epilentio" class="text-s"><i class="fa-brands fa-instagram"></i></a>
+        </li>
+        <li>
+         <label class="swap swap-rotate">
+                      
+                      <input id="themeController" onclick="saveThemeState()" type="checkbox" class="theme-controller" value="nord">
+                      
+         <svg class="swap-on icon" viewbox="0 0 24 24">
+          
+                        
+          <use href="/images/icons.svg#moon"></use>
+          
+                      
+         </svg>
+         
+                      
+         <svg class="swap-off icon" viewbox="0 0 24 24">
+          
+                        
+          <use href="/images/icons.svg#sun"></use>
+          
+                      
+         </svg>
+         
+                    
+        </label>
+       </li>
+      </ul>
+     </div>
     </div>
+   </nav>
   </div>
-</section>
-
+ </header>
+ <main>
+  <div class="max-w-2xl m-auto">
+   <div id="content" class="pt-4 px-4 md:px-0">
+    <div>
+     <section id="consulting" class="p-4">
+      <div class="grid md:grid-cols-2 gap-2 h-full flex items-center">
+       <img src="/images/freelancing.svg" alt="contracting artwork">
+       <div>
+        <h1 class="text-2xl font-bold">
+         At Epilentio we engineer reliable and regression-free software solutions
+          for your ideas.
+        </h1>
+        <p>
+         It doesn't matter whether you need a production ready software solution,
+          a rapidly developed software and/or hardware prototype, staff augmentation,
+          or consultation throughout your project.
+        </p>
+       </div>
+      </div>
+     </section>
+     <div class="divider"></div>
+     <section id="technologies" class="p-4">
+      <div>
+       <h1 class="text-2xl font-bold">
+        Technologies
+       </h1>
+       <p class="pb-4">
+        At Epilentio, we leverage the strength of functional programming languages
+        like OCaml, Haskell, and Rust to engineer robust and high-quality software.
+        These languages enable us to eliminate the vast majority of bugs by design,
+        thanks to features like a strong type system and immutability.
+        <br>
+        This approach not only results in more reliable software but also
+        significantly boosts development speed by reducing debugging time
+        and simplifies long-term maintenance.
+        <br>
+        With Nix/NixOS, we ensure deterministic and reproducible builds,
+        enabling seamless deployment and system configuration management,
+        and ultimately allowing us to provide reliable operations for our clients.
+       </p>
+      </div>
+      <div class="grid grid-cols-3 place-items-center gap-2">
+       <div>
+        <a class="flex justify-center" href="https://nixos.org/">Nix/NixOS</a>
+        <a href="https://nixos.org/"><img class="max-h-40" src="/images/nix.svg" alt="NixOS logo"></a>
+       </div>
+       <div>
+        <a class="flex justify-center" href="https://haskell.org/">Haskell</a>
+        <a href="https://haskell.org/"><img class="max-h-40" src="/images/haskell.png" alt="Haskell logo"></a>
+       </div>
+       <div>
+        <a class="flex justify-center" href="https://ocaml.org/">OCaml</a>
+        <a href="https://ocaml.org/"><img class="max-h-40" src="/images/ocaml.svg" alt="OCaml logo"></a>
+       </div>
+      </div>
+     </section>
+    </div>
+   </div>
+  </div>
+ </main>
+ <div class="max-w-2xl m-auto">
   <div class="divider"></div>
-  <section id="technologies" class="p-4">
-  <div>
-    <h1 class="text-2xl font-bold">Technologies</h1>
-    <p class="pb-4">
-      At Epilentio, our commitment to building regression-free and reliable
-      software solutions is powered by our expertise in cutting-edge
-      technologies. We specialize in functional programming, leveraging the
-      power of languages like Haskell, Elm, PureScript, and Rust to craft robust
-      and error-free software. With Nix/ NixOS, we ensure deterministic and
-      reproducible builds, enabling seamless deployment and system configuration
-      management.
+ </div>
+ <footer class="footer sm:footer-horizontal bg-base-100 max-w-2xl m-auto px-4 mb-4">
+  <aside>
+   <h6 class="footer-title">
+    Company:
+   </h6>
+   <section class="legal-information">
+    <h2 class="text-xl">
+     Epilentio d.o.o.
+    </h2>
+    <p>
+     Ulica Gospe od zdravlja 34 <br>
+              21264 Donji Proložac <br>
+              Croatia (HR) <br>
+              <strong>VAT ID:</strong> HR 349 332 839 65<br>
+              <strong>OIB/ Company ID:</strong> 349 332 839 65<br>
+              <strong>E-Mail:</strong> petricevic@epilentio.hr<br>
     </p>
-  </div>
-  <div class="grid grid-cols-3 place-items-center gap-2">
-    <div>
-      <a class="flex justify-center" href="https://nixos.org/">Nix/NixOS</a>
-      <a href="https://nixos.org/"><img class="max-h-40" src="./images/nix.svg" alt="NixOS logo" /></a>
-    </div>
-    <div>
-      <a class="flex justify-center" href="https://haskell.org/">Haskell</a>
-      <a href="https://haskell.org/"><img class="max-h-40" src="./images/haskell.png" alt="Haskell logo" /></a>
-    </div>
-    <div>
-      <a class="flex justify-center" href="https://purescript.org/">PureScript</a>
-      <a href="https://purescript.org/"><img class="max-h-40" src="./images/purescript.png" alt="PureScript logo" /></a>
-    </div>
-  </div>
-</section>
-
-</div>
-</div>
-      </main>
-      <div class="divider"></div>
-      <footer class="footer p-4">
-        <aside>
-          <header class="footer-title">Company</header>
-          <section class="legal-information">
-  <h2 class="text-xl">Epilentio d.o.o.</h2>
+   </section>
+  </aside>
+  <nav>
+   <h6 class="footer-title">
+    Social:
+   </h6>
+   <a href="https://linktr.ee/epilentio" class="text-sm"><i class="fa-brands fa-airbnb"></i> Book your Apartment now</a>
+          <a href="https://instagram.com/epilentio" class="text-sm"><i class="fa-brands fa-instagram"></i> Follow us on
+            Instagram</a>
+  </nav>
+  <nav>
+   <h6 class="footer-title">
+    Contact us:
+   </h6>
+   <a href="https://wa.me/385953136831" class="text-sm"><i class="fa-brands fa-whatsapp"></i> Text us on WhatsApp</a>
+          <a href="tel:+385953136831" class="text-sm"><i class="fa-solid fa-phone"></i> +385 95 3136 831</a>
+          <a href="mailto:petricevic@epilentio.hr?subject=Request&amp;body=Poruka" class="text-sm"><i class="fa-solid fa-envelope"></i> petricevic@epilentio.hr</a>
+  </nav>
+ </footer>
+ <footer class="footer footer-center text-neutral-content p-4">
   <p>
-    Ulica Gospe od zdravlja 34 <br />
-    21264 Donji Proložac <br />
-    Croatia (HR) <br />
-    <strong>VAT ID:</strong> HR 349 332 839 65<br />
-    <strong>OIB/ Company ID:</strong> 349 332 839 65<br />
-    <strong>E-Mail:</strong> petricevic@epilentio.hr<br />
+   Copyright © 2025 - All right reserved by Epilentio d.o.o.
   </p>
-</section>
-
-        </aside>
-        <div>
-          <header class="footer-title">Social</header>
-          <ul class="space-y-2">
-            <li>
-              <a href="https://linktr.ee/epilentio" class="text-sm"><i class="fa-brands fa-airbnb"></i> Book your Apartment now</a>
-            </li>
-            <li>
-              <a href="https://instagram.com/epilentio" class="text-sm"><i class="fa-brands fa-instagram"></i> Follow us on
-                Instagram</a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <header class="footer-title">Contact us</header>
-          <ul class="space-y-2">
-            <li>
-              <a href="https://wa.me/385953136831" class="text-sm"><i class="fa-brands fa-whatsapp"></i> Text us on WhatsApp</a>
-            </li>
-            <li>
-              <a href="tel:+385953136831" class="text-sm"><i class="fa-solid fa-phone"></i> +385 95 3136 831</a>
-            </li>
-            <li>
-              <a href="mailto:petricevic@epilentio.hr?subject=Request&body=Poruka" class="text-sm"><i class="fa-solid fa-envelope"></i> petricevic@epilentio.hr</a>
-            </li>
-          </ul>
-        </div>
-      </footer>
-      <footer class="footer footer-center text-neutral-content p-4">
-        <p>Copyright © 2024 - All right reserved by Epilentio d.o.o.</p>
-      </footer>
-    </div>
-  </body>
+ </footer>
+</body>
 </html>

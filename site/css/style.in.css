@@ -1,0 +1,22 @@
+@import "tailwindcss" source("..");
+@plugin "@tailwindcss/typography";
+@plugin "daisyui" {
+  themes:
+    nord --default,
+    dim --prefersdark;
+}
+.icon {
+  height: 1em;
+  fill: currentColor;
+}
+.navbar-start {
+  width: 90%;
+}
+/* cinzel-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Cinzel';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/cinzel-v23-latin-regular.woff2') format('woff2');
+}
