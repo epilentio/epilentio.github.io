@@ -13,7 +13,6 @@
   <script src="https://analytics.marijan.pro/matomo.js" async="" defer=""></script>
   <script src="/js/theme-state.js"></script>
   <script src="/js/copy-to-clipboard.js"></script>
-  <script defer="" src="/js/fontawesome.min.js"></script>
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta http-equiv="X-XSS-Protection" content="1; mode=block">
   <meta name="robots" content="noai, noimageai">
@@ -35,32 +34,11 @@
        <li>
         <a href="/">Software Engineering</a>
        </li>
-       <li>
-        <details>
-         <summary>
-          Rental Apartments
-         </summary>
-         <ul class="bg-base-200">
-          <li>
-           <a href="/apartments-for-vacations/">For Vacations</a>
-          </li>
-          <li>
-           <a href="/apartments-for-nomads/">For Digital Nomads</a>
-          </li>
-         </ul>
-        </details>
-       </li>
       </ul>
      </div>
      <div class="navbar-end">
       <div>
        <ul class="menu menu-horizontal text-xl">
-        <li>
-         <a href="https://links.epilentio.hr" class="text-s"><i class="fa-solid fa-link"></i></a>
-        </li>
-        <li>
-         <a href="https://instagram.com/epilentio" class="text-s"><i class="fa-brands fa-instagram"></i></a>
-        </li>
         <li>
          <label class="swap swap-rotate">
                       
@@ -158,45 +136,76 @@
  <footer class="footer sm:footer-horizontal bg-base-100 max-w-2xl m-auto px-4 mb-4">
   <aside>
    <h6 class="footer-title">
-    Company:
+    Company
    </h6>
    <section class="legal-information">
     <h2 class="text-xl">
      Epilentio d.o.o.
     </h2>
-    <p>
+    <address>
      Put Sv. Roka 56 D <br>
               21315 Sumpetar-Jesenice<br>
-              Croatia (HR) <br>
-              <strong>VAT ID:</strong> HR 349 332 839 65<br>
-              <span>
-                <strong>OIB/ Company ID:</strong> 349 332 839 65 <button onclick="copyToClipboard('34933283965', this)">Copy text</button><br>
-              </span>
-              <strong>E-Mail:</strong> petricevic@epilentio.hr<br>
-    </p>
-   </section>
-  </aside>
-  <nav>
-   <h6 class="footer-title">
-    Social:
-   </h6>
-   <a href="https://links.epilentio.hr" class="text-sm"><i class="fa-solid fa-link"></i> Book your Apartment now</a>
-          <a href="https://instagram.com/epilentio" class="text-sm"><i class="fa-brands fa-instagram"></i> Follow us on
-            Instagram</a>
-  </nav>
-  <nav>
-   <h6 class="footer-title">
-    Contact us:
-   </h6>
-   <a href="https://wa.me/385953136831" class="text-sm"><i class="fa-brands fa-whatsapp"></i> Text us on WhatsApp</a>
-          <a href="tel:+385953136831" class="text-sm"><i class="fa-solid fa-phone"></i> +385 95 3136 831</a>
-          <a href="mailto:petricevic@epilentio.hr?subject=Request&amp;body=Poruka" class="text-sm"><i class="fa-solid fa-envelope"></i> petricevic@epilentio.hr</a>
-  </nav>
- </footer>
- <footer class="footer footer-center text-neutral-content p-4">
-  <p>
-   Copyright © 2025 - All right reserved by Epilentio d.o.o.
-  </p>
- </footer>
+              Croatia (HR)
+    </address>
+    <p>
+     VAT ID: HR 349 332 839 65<br>
+              <span class="inline-flex items-center align-middle">
+                OIB (Company ID): 349 332 839 65
+                <span class="tooltip tooltip-top" id="copy-tooltip" data-tip="Copy">
+                  <button class="btn btn-ghost btn-xs btn-square" onclick="copyToClipboard('34933283965', this)">
+                    
+     <svg class="copy-icon icon" viewbox="0 0 24 24">
+      
+                      
+      <use href="/images/icons.svg#copy-to-clipboard"></use>
+      
+                    
+     </svg>
+     
+                    
+     <svg class="copy-icon-success icon hidden text-success" viewbox="0 0 24 24">
+      
+                      
+      <use href="/images/icons.svg#copy-to-clipboard-success"></use>
+      
+                    
+     </svg>
+     
+                  
+    </button>
+    
+                
+   </span>
+   
+              
+  </span>
+  <br>
+ </p>
+</section>
+</aside>
+<nav>
+<h6 class="footer-title">
+ Contact us
+</h6>
+<a href="mailto:petricevic@epilentio.hr" class="text-sm flex items-center gap-1">
+            
+<svg class="icon" viewbox="0 0 100 100">
+ 
+              
+ <use href="/images/icons.svg#envelope"></use>
+ 
+            
+</svg>
+
+            petricevic@epilentio.hr
+          
+</a>
+</nav>
+</footer>
+<footer class="footer footer-center text-neutral-content p-4">
+<p>
+Copyright © 2019 - 2026 - All right reserved by Epilentio d.o.o.
+</p>
+</footer>
 </body>
 </html>
