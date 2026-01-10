@@ -1,10 +1,18 @@
 function copyToClipboard(textToCopy, buttonElement) {
   navigator.clipboard.writeText(textToCopy)
     .then(() => {
-      const originalText = buttonElement.textContent;
-      buttonElement.textContent = 'Copied!';
+      const tooltip = buttonElement.parentElement;
+      const copyIcon = buttonElement.querySelector('.copy-icon');
+      const checkIcon = buttonElement.querySelector('.copy-icon-success');
+
+      tooltip.setAttribute('data-tip', 'Copied!');
+      copyIcon.classList.add('hidden');
+      checkIcon.classList.remove('hidden');
+
       setTimeout(() => {
-        buttonElement.textContent = originalText;
+        tooltip.setAttribute('data-tip', 'Copy to clipboard');
+        copyIcon.classList.remove('hidden');
+        checkIcon.classList.add('hidden');
       }, 2000);
     })
     .catch(err => {
