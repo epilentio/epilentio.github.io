@@ -2,10 +2,10 @@
   description = "Epilentio d.o.o. website";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/8a2f738d9d1f1d986b5a4cd2fd2061a7127237d7";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
     treefmt-nix.url = "github:numtide/treefmt-nix";
     treefmt-nix.inputs.nixpkgs.follows = "nixpkgs";
-    npmlock2nix.url = "github:nix-community/npmlock2nix/9197bbf397d76059a76310523d45df10d2e4ca81";
+    npmlock2nix.url = "github:nix-community/npmlock2nix/4d9060afbaa5f57ee0b8ef11c7044ed287a7d302";
     npmlock2nix.flake = false;
   };
 
@@ -29,7 +29,7 @@
       apps.${system} = {
         gh-deploy = {
           type = "app";
-          program = "${pkgs.lib.getExe pkgs.gh-deploy}";
+          program = pkgs.lib.getExe pkgs.gh-deploy;
         };
       };
 
