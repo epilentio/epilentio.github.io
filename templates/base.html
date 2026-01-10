@@ -74,32 +74,50 @@
         class="footer sm:footer-horizontal bg-base-100 max-w-2xl m-auto px-4 mb-4"
       >
         <aside>
-          <h6 class="footer-title">Company:</h6>
+          <h6 class="footer-title">Company</h6>
           <section class="legal-information">
             <h2 class="text-xl">Epilentio d.o.o.</h2>
-            <p>
+            <address>
               Put Sv. Roka 56 D <br />
               21315 Sumpetar-Jesenice<br />
-              Croatia (HR) <br />
-              <strong>VAT ID:</strong> HR 349 332 839 65<br />
-              <span>
-                <strong>OIB/ Company ID:</strong> 349 332 839 65 <button onclick="copyToClipboard('34933283965', this)">Copy text</button><br />
-              </span>
-              <strong>E-Mail:</strong> petricevic@epilentio.hr<br />
+              Croatia (HR)
+            </address>
+            <p>
+              VAT ID: HR 349 332 839 65<br />
+              <span class="inline-flex items-center align-middle">
+                OIB (Company ID): 349 332 839 65
+                <span class="tooltip tooltip-top" id="copy-tooltip" data-tip="Copy">
+                  <button
+                    class="btn btn-ghost btn-xs btn-square"
+                    onclick="copyToClipboard('34933283965', this)"
+                  >
+                    <svg class="copy-icon icon" viewBox="0 0 24 24">
+                      <use href="/images/icons.svg#copy-to-clipboard"></use>
+                    </svg>
+                    <svg class="copy-icon-success icon hidden text-success" viewBox="0 0 24 24">
+                      <use href="/images/icons.svg#copy-to-clipboard-success"></use>
+                    </svg>
+                  </button>
+                </span>
+              </span><br />
             </p>
           </section>
         </aside>
         <nav>
           <h6 class="footer-title">Contact us</h6>
           <a
-            href="mailto:petricevic@epilentio.hr?subject=Request&body=Poruka"
-            class="text-sm"
-            ><i class="fa-solid fa-envelope"></i> petricevic@epilentio.hr</a
+            href="mailto:petricevic@epilentio.hr"
+            class="text-sm flex items-center gap-1"
           >
+            <svg class="icon" viewBox="0 0 100 100">
+              <use href="/images/icons.svg#envelope"></use>
+            </svg>
+            petricevic@epilentio.hr
+          </a>
         </nav>
       </footer>
       <footer class="footer footer-center text-neutral-content p-4">
-        <p>Copyright © 2025 - All right reserved by Epilentio d.o.o.</p>
+        <p>Copyright © 2019 - 2026 - All right reserved by Epilentio d.o.o.</p>
       </footer>
   </body>
 </html>
