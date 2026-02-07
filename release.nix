@@ -24,6 +24,9 @@ in
   inherit (pkgs) dist;
   devShell = pkgs.mkShell {
     inputsFrom = [ pkgs.dist ];
+    shellHook = ''
+      export NODE_PATH=${pkgs.dist.passthru.NODE_PATH};
+    '';
     nativeBuildInputs = with pkgs; [
       simple-http-server
       nodejs

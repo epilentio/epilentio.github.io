@@ -29,31 +29,30 @@ runCommand "dist"
     tailwindcss_4
     pandoc
   ];
-  inherit NODE_PATH;
+  env = {
+    inherit NODE_PATH;
+  };
+  passthru = {
+    inherit NODE_PATH;
+  };
+  src =
+    let fs = lib.fileset;
+    in fs.toSource {
+      root = ./.;
+      fileset = fs.unions [
+        ./site
+        ./templates
+        ./plugins
+        ./soupault.toml
+        ./Makefile
+      ];
+    };
 }
   ''
     set -euo pipefail
-    cp -r ${./site} site
-    cp -r ${./templates} templates
-    cp -r ${./plugins} plugins
-    echo "Running soupault ..."
-    soupault --debug --config ${./soupault.toml}
+    cp -r $src/* .
 
-    # The tailwind CLI doesn't check the NODE_PATH environment variable,
-    # it expects a node_modules folder
-    cp -r ${NODE_PATH} build/css/node_modules
-
-    echo "Running tailwind ..."
-    tailwindcss -i build/css/style.in.css -o build/css/style.css
-    rm build/css/style.in.css
-
-    chmod -R +w build/css/node_modules
-    rm -r build/css/node_modules
-
-    echo "Running syntax highlighter ..."
-    tmp=$(mktemp)
-    echo '$highlighting-css$' > "$tmp"
-    echo '`test`{.c}' | pandoc --highlight-style=zenburn --template="$tmp" > build/css/syntax.css
+    make all
 
     mkdir -p $out
     cp -r build/* $out/
