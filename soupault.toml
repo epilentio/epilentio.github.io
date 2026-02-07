@@ -94,3 +94,8 @@ widget = "add-meta-description"
 
 [widgets.extract-canonical]
 widget = "extract-canonical"
+
+[widgets.i18n]
+widget = "i18n"
+languages = ["en", "es", "hr", "de"]
+default_lang = "en"

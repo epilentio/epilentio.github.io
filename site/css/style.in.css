@@ -9,8 +9,8 @@
   height: 1em;
   fill: currentColor;
 }
-.navbar-start {
-  width: 90%;
+.lang-link.selected {
+  font-weight: bold;
 }
 /* cinzel-regular - latin */
 @font-face {
