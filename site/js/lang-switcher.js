@@ -1,4 +1,4 @@
-const LANGS = ['en', 'es', 'hr', 'de'];
+const LANGS = ['en', 'hr'];
 const langPattern = new RegExp(`^/(${LANGS.slice(1).join('|')})(/|$)`);
 const currentLang = document.documentElement.lang;
 
@@ -14,7 +14,7 @@ document.querySelectorAll('.lang-link').forEach(link => {
     if (res.ok) {
       location.href = link.href;
     } else {
-      showToast('Page not available in selected language "${lang}".');
+      showToast(`Page not available in selected language "${lang}".`);
     }
   };
 });
