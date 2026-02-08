@@ -1,0 +1,148 @@
+<link rel="canonical" href="https://epilentio.hr/hr/" />
+
+<article class="space-y-8">
+
+  <section class="text-center pt-8">
+    <h1 class="text-4xl md:text-5xl font-bold mb-6">Pouzdani i robusni sustavi</h1>
+    <p class="text-lg md:text-xl mb-8">
+      U Epilentiju razvijamo robusna softverska i hardverska rješenja za kompleksne probleme.
+      Bilo da vam treba production-ready sustav, proof-of-concept, ili stručno pojačanje tima,
+      pružamo tehničku temeljitost koja vaše ideje pretvara u stabilnu, održivu stvarnost.
+      Od arhitekture koda do deploymenta infrastrukture, osiguravamo da je vaše rješenje determinističko i otporno.
+    </p>
+    <a href="mailto:petricevic@epilentio.hr?subject=Upit" class="btn btn-primary btn-lg">Kontaktirajte nas</a>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <h2 class="text-2xl font-bold mb-2">Upravljanje inherentnom kompleksnošću</h2>
+    <p class="text-lg text-base-content/70 mb-6">Funkcijsko programiranje</p>
+
+    <p class="mb-6">
+      Svaki problem ima inherentnu kompleksnost. Tradicionalno imperativno programiranje, s mutable stanjem i implicitnim efektima,
+      dodaje sloj nepotrebne kompleksnost, čineći sustave težima za razumijevanje, održavanje i nadogradnju.
+      Koristimo industrijski provjerene funkcijske programske jezike
+      poput OCamla i Haskella kako bismo tu kompleksnost držali pod kontrolom.
+    </p>
+
+    <div class="join join-vertical w-full mb-8">
+      <div class="collapse collapse-arrow join-item border border-base-300 bg-base-200">
+        <input type="radio" name="fp-accordion" checked="checked" />
+        <div class="collapse-title font-semibold">Korektnost po konstrukciji</div>
+        <div class="collapse-content">
+          <p>
+            Strogi, statički sustavi tipova nam omogućuju da modeliramo vašu poslovnu domenu tako da
+            nevaljana stanja budu nepredstavljiva. Čitave klase bugova eliminiramo tijekom compile time – prije nego ikada dođu u produkciju.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow join-item border border-base-300 bg-base-200">
+        <input type="radio" name="fp-accordion" />
+        <div class="collapse-title font-semibold">Kod o kojem se može logički zaključivati</div>
+        <div class="collapse-content">
+          <p>
+            S "pure" funkcijama, isti ulazni podaci uvijek proizvode iste izlazne podatke – nema skrivenog stanja, nema iznenađenja.
+            S "immutable" podacima, vrijednosti se nikada ne mijenjaju ispod vas. Zajedno čine
+            kod lakšim za razumijevanje, testiranje i promjenu – smanjujući kognitivno opterećenje
+            čak i dok sustavi rastu u kompleksnosti.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow join-item border border-base-300 bg-base-200">
+        <input type="radio" name="fp-accordion" />
+        <div class="collapse-title font-semibold">Evolucija bez regresije</div>
+        <div class="collapse-content">
+          <p>
+            Funkcijsko programiranje omogućuje restrukturiranje bez straha. Kako se vaše poslovanje razvija,
+            vaš softver ostaje ispravan, osiguravajući da nove značajke ne narušavaju postojeće temelje.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 gap-4">
+      <a href="https://ocaml.org/" class="card bg-base-200 hover:bg-base-300 transition-colors">
+        <div class="card-body items-center text-center p-4">
+          <img class="h-16 md:h-20" src="/images/ocaml.svg" alt="OCaml logo" />
+          <span class="font-semibold mt-2">OCaml</span>
+        </div>
+      </a>
+      <a href="https://haskell.org/" class="card bg-base-200 hover:bg-base-300 transition-colors">
+        <div class="card-body items-center text-center p-4">
+          <img class="h-16 md:h-20" src="/images/haskell.png" alt="Haskell logo" />
+          <span class="font-semibold mt-2">Haskell</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <h2 class="text-2xl font-bold mb-2">Deklarativni buildovi i pouzdani deploymenti</h2>
+    <p class="text-lg text-base-content/70 mb-6">Determinističke operacije s Nix & NixOS</p>
+
+    <p class="mb-6">
+      Stabilan program je beskoristan ako je okruženje u kojem se izvršava nekonzistentno.
+      Koristimo Nix i NixOS kako bismo eliminirali varijable tradicionalne "stateful" infrastrukture,
+      tretirajući vaše cjelokupno operativno okruženje kao "pure" funkciju.
+    </p>
+
+    <div class="join join-vertical w-full mb-8">
+      <div class="collapse collapse-arrow join-item border border-base-300 bg-base-200">
+        <input type="radio" name="nix-accordion" checked="checked" />
+        <div class="collapse-title font-semibold">Hermetička reproducibilnost</div>
+        <div class="collapse-content">
+          <p>
+            "Radi na mom računalu" je obično izgovor. S Nixom, to je garancija.
+            Svaka ovisnost je fiksirana – biblioteke, sistemski paketi, njihove verzije,
+            njihove konfiguracije – čineći buildove reproducibilnim u svim okruženjima.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow join-item border border-base-300 bg-base-200">
+        <input type="radio" name="nix-accordion" />
+        <div class="collapse-title font-semibold">Atomske nadogradnje</div>
+        <div class="collapse-content">
+          <p>
+            Nadogradnje na NixOS-u su atomske. Ako deployment ne zadovoljava operativne zahtjeve,
+            sustav se može instantno vratiti na prethodno, poznato, dobro stanje,
+            osiguravajući zero-downtime operacije.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow join-item border border-base-300 bg-base-200">
+        <input type="radio" name="nix-accordion" />
+        <div class="collapse-title font-semibold">Eliminacija configuration drifta</div>
+        <div class="collapse-content">
+          <p>
+            Upravljanjem infrastrukturom kao realizacijom deklarativnog koda, osiguravamo da vaši
+            serveri nikada ne odstupaju od svog predviđenog stanja, pružajući transparentnu i revizijsku osnovu.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex justify-center">
+      <a href="https://nixos.org/" class="card bg-base-200 hover:bg-base-300 transition-colors w-48">
+        <div class="card-body items-center text-center p-4">
+          <img class="h-16 md:h-20" src="/images/nix.svg" alt="NixOS logo" />
+          <span class="font-semibold mt-2">Nix/NixOS</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="text-center pb-4">
+    <h2 class="text-2xl font-bold mb-4">Izgradimo nešto robusno</h2>
+    <p class="mb-6">
+      Bilo da započinjete novi projekt ili unaprjeđujete postojeći sustav,
+      rado bismo čuli o vašim izazovima.
+    </p>
+    <a href="mailto:petricevic@epilentio.hr?subject=Upit" class="btn btn-primary btn-lg">Kontaktirajte nas</a>
+  </section>
+
+</article>
