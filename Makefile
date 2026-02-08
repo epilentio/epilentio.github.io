@@ -1,4 +1,4 @@
-.PHONY: all clean serve
+.PHONY: all clean
 
 all: clean
 	@echo "Running soupault ..." >&2
@@ -11,9 +11,6 @@ all: clean
 	@tmp=$$(mktemp) && \
 		echo '$$highlighting-css$$' > "$$tmp" && \
 		echo '`test`{.c}' | pandoc --highlight-style=zenburn --template="$$tmp" > build/css/syntax.css
-
-serve: all
-	simple-http-server -i build/
 
 clean:
 	rm -rf build/
