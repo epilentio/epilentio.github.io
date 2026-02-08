@@ -1,60 +1,149 @@
 <link rel="canonical" href="https://epilentio.hr/" />
-<div>
-  <section id="consulting">
-    <div class="grid md:grid-cols-2 gap-2 h-full flex items-center">
-      <img src="/images/freelancing.svg" alt="Contracting artwork" />
-      <div class="prose prose-sm max-w-none">
-        <h2>
-          At Epilentio we engineer reliable and regression-free software solutions
-          for your ideas.
-        </h2>
-        <p>
-          It doesn't matter whether you need a production ready software solution,
-          a rapidly developed software and/or hardware prototype, staff augmentation,
-          or consultation throughout your project.
-        </p>
+
+<article class="space-y-8">
+
+  <section class="text-center pt-8">
+    <h1 class="text-4xl md:text-5xl font-bold mb-6">Reliable and Robust Systems</h1>
+    <p class="text-lg md:text-xl mb-8">
+      At Epilentio, we engineer robust software and hardware solutions for complex problems.
+      Whether you need a production-ready system, a proof-of-concept, or expert staff augmentation,
+      we provide the technical rigor to turn your ideas into stable, maintainable reality.
+      From the code's architecture to the deployment infrastructure, we ensure your solution is deterministic and resilient.
+    </p>
+    <a href="mailto:petricevic@epilentio.hr?subject=Engineering%20Inquiry" class="btn btn-primary btn-lg">Get in Touch</a>
+  </section>
+
+  <div class="divider"></div>
+
+  <section>
+    <h2 class="text-2xl font-bold mb-2">Managing Inherent Complexity</h2>
+    <p class="text-lg text-base-content/70 mb-6">Functional Programming</p>
+
+    <p class="mb-6">
+      Every problem has inherent complexity. Traditional imperative programming, with its mutable state and implicit effects,
+      adds complexity on top, making systems harder to reason about, maintain, and evolve.
+      We leverage industrial-strength functional programming languages
+      like OCaml and Haskell to get this complexity under control.
+    </p>
+
+    <div class="join join-vertical w-full mb-8">
+      <div class="collapse collapse-arrow join-item border border-base-300 bg-base-200">
+        <input type="radio" name="fp-accordion" checked="checked" />
+        <div class="collapse-title font-semibold">Correctness by Construction</div>
+        <div class="collapse-content">
+          <p>
+            Strong, static type systems let us model your business domain such that invalid states are
+            unrepresentable. Entire classes of bugs are eliminated at compile time – before they ever reach
+            production.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow join-item border border-base-300 bg-base-200">
+        <input type="radio" name="fp-accordion" />
+        <div class="collapse-title font-semibold">Code You Can Reason About</div>
+        <div class="collapse-content">
+          <p>
+            With pure functions, the same inputs always produce the same outputs – no hidden state, no
+            surprises. With immutable data, values never change out from under you. Together, they make
+            code easier to understand, test, and change – reducing cognitive load
+            even as systems grow in complexity.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow join-item border border-base-300 bg-base-200">
+        <input type="radio" name="fp-accordion" />
+        <div class="collapse-title font-semibold">Evolution Without Regression</div>
+        <div class="collapse-content">
+          <p>
+            Functional programming allows for fearless refactoring. As your business evolves,
+            your software stays correct, ensuring that new features don't break existing foundations.
+          </p>
+        </div>
       </div>
     </div>
-  </section>
-  <div class="divider"></div>
-  <section id="technologies" class="prose max-w-none">
-    <h1>Technologies</h1>
-    <p>
-      At Epilentio, we leverage the strength of functional programming languages
-      like OCaml or Haskell to engineer robust and high-quality software.
-      These languages enable us to eliminate the vast majority of bugs by design,
-      thanks to features like a strong type system and immutability.
-      <br>
-      This approach not only results in more reliable software but also
-      significantly boosts development speed by reducing debugging time
-      and simplifies long-term maintenance.
-      <br>
-      With Nix/NixOS, we ensure deterministic and reproducible builds,
-      enabling reliable deployments and system configuration management,
-      and ultimately allowing us to provide zero-downtime operations for our clients.
-    </p>
-    <div class="grid grid-flow-col grid-rows-1 place-items-center gap-2">
-      <figure>
-        <a href="https://nixos.org/"
-          ><img class="max-h-40" src="/images/nix.svg" alt="NixOS logo"
-        /></a>
-        <a class="flex justify-center" href="https://nixos.org/">Nix/NixOS</a>
-      </figure>
-      <figure>
-        <a href="https://ocaml.org/"
-          ><img
-            class="max-h-40"
-            src="/images/ocaml.svg"
-            alt="OCaml logo"
-        /></a>
-        <a class="flex justify-center" href="https://ocaml.org/">OCaml</a>
-      </figure>
-      <figure>
-        <a href="https://haskell.org/"
-          ><img class="max-h-40" src="/images/haskell.png" alt="Haskell logo"
-        /></a>
-        <a class="flex justify-center" href="https://haskell.org/">Haskell</a>
-      </figure>
+
+    <div class="grid grid-cols-2 gap-4">
+      <a href="https://ocaml.org/" class="card bg-base-200 hover:bg-base-300 transition-colors">
+        <div class="card-body items-center text-center p-4">
+          <img class="h-16 md:h-20" src="/images/ocaml.svg" alt="OCaml logo" />
+          <span class="font-semibold mt-2">OCaml</span>
+        </div>
+      </a>
+      <a href="https://haskell.org/" class="card bg-base-200 hover:bg-base-300 transition-colors">
+        <div class="card-body items-center text-center p-4">
+          <img class="h-16 md:h-20" src="/images/haskell.png" alt="Haskell logo" />
+          <span class="font-semibold mt-2">Haskell</span>
+        </div>
+      </a>
     </div>
   </section>
-</div>
+
+  <div class="divider"></div>
+
+  <section>
+    <h2 class="text-2xl font-bold mb-2">Declarative Builds & Reliable Deployments</h2>
+    <p class="text-lg text-base-content/70 mb-6">Deterministic Operations with Nix & NixOS</p>
+
+    <p class="mb-6">
+      A stable program is useless if the environment it runs on is inconsistent.
+      We use Nix and NixOS to eliminate the variables of traditional "stateful" infrastructure,
+      treating your entire operating environment as a pure function.
+    </p>
+
+    <div class="join join-vertical w-full mb-8">
+      <div class="collapse collapse-arrow join-item border border-base-300 bg-base-200">
+        <input type="radio" name="nix-accordion" checked="checked" />
+        <div class="collapse-title font-semibold">Hermetic Reproducibility</div>
+        <div class="collapse-content">
+          <p>
+            "It works on my machine" is usually an excuse. With Nix, it's a guarantee.
+            Every dependency is pinned – libraries, system packages, their versions,
+            their configurations – making builds reproducible across all environments.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow join-item border border-base-300 bg-base-200">
+        <input type="radio" name="nix-accordion" />
+        <div class="collapse-title font-semibold">Atomic Transitions</div>
+        <div class="collapse-content">
+          <p>
+            Upgrades on NixOS are atomic. If a deployment does not meet operational requirements,
+            the system can be reverted to a previous, known, good state instantaneously,
+            ensuring zero-downtime operations.
+          </p>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow join-item border border-base-300 bg-base-200">
+        <input type="radio" name="nix-accordion" />
+        <div class="collapse-title font-semibold">Eliminating Configuration Drift</div>
+        <div class="collapse-content">
+          <p>
+            By managing infrastructure as a realization of declarative code, we ensure that your
+            servers never deviate from their intended state, providing a transparent and auditable foundation.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex justify-center">
+      <a href="https://nixos.org/" class="card bg-base-200 hover:bg-base-300 transition-colors w-48">
+        <div class="card-body items-center text-center p-4">
+          <img class="h-16 md:h-20" src="/images/nix.svg" alt="NixOS logo" />
+          <span class="font-semibold mt-2">Nix/NixOS</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="text-center pb-4">
+    <h2 class="text-2xl font-bold mb-4">Let's Build Something Robust</h2>
+    <p class="mb-6">
+      Whether you're starting a new project or improving an existing system,
+      we'd love to hear about your challenges.
+    </p>
+    <a href="mailto:petricevic@epilentio.hr?subject=Engineering%20Inquiry" class="btn btn-primary btn-lg">Get in Touch</a>
+  </section>
+
+</article>
