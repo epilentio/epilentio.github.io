@@ -25,117 +25,131 @@
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
     <meta name="robots" content="noai, noimageai">
   </head>
-    <body>
-      <header class="bg-base-100">
-        <div class="max-w-3xl m-auto">
-          <nav class="navbar">
-            <div class="navbar-start">
-              <a class="btn btn-ghost normal-case text-xl" href="/" style="font-family: 'Cinzel', sans-serif;">
-                EpilentiO
-              </a>
-              <ul class="menu menu-horizontal">
-                <li>
-                  <a href="/">Software Engineering</a>
-                </li>
-              </ul>
-            </div>
-            <div class="navbar-end">
-              <!-- external links -->
-              <ul class="menu menu-horizontal">
-                <li>
-                  <details>
-                    <summary>
-                      <svg class="icon" viewBox="0 0 24 24">
-                        <use href="/images/icons.svg#language"></use>
-                      </svg>
-                      <span class="lang-label" data-lang="de">DE</span>
-                      <span class="lang-label" data-lang="en">EN</span>
-                      <span class="lang-label" data-lang="es">ES</span>
-                      <span class="lang-label" data-lang="hr">HR</span>
-                    </summary>
-                    <ul>
-                      <li><a class="lang-link" data-lang="de" href="#">Deutsch</a></li>
-                      <li><a class="lang-link" data-lang="en" href="#">English</a></li>
-                      <li><a class="lang-link" data-lang="es" href="#">Español</a></li>
-                      <li><a class="lang-link" data-lang="hr" href="#">Hrvatski</a></li>
-                    </ul>
-                  </details>
-                </li>
-                <li>
-                  <label class="swap swap-rotate h-full items-center">
-                    <!-- this hidden checkbox controls the state -->
-                    <input id="themeController" onclick="saveThemeState()" type="checkbox" class="theme-controller" value="nord" />
-                    <svg class="swap-on icon" viewBox="0 0 24 24">
-                      <use href="/images/icons.svg#moon"></use>
-                    </svg>
-                    <svg class="swap-off icon" viewBox="0 0 24 24">
-                      <use href="/images/icons.svg#sun"></use>
-                    </svg>
-                  </label>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
-      </header>
-      <main>
-        <div class="max-w-2xl m-auto">
-          <div id="content" class="px-4 md:px-0">
-          </div>
-        </div>
-      </main>
-      <div class="max-w-2xl m-auto">
-        <div class="divider"></div>
+  <body>
+    <div class="drawer drawer-end">
+      <input id="nav-drawer" type="checkbox" class="drawer-toggle" />
+      <div class="drawer-side">
+        <label for="nav-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+        <ul class="menu bg-base-200 min-h-full w-64 p-4">
+          <li class="menu-title">Services</li>
+          <li><a href="/">Software Engineering</a></li>
+          <li><a href="/strategy">Digital Sovereignty & Strategy</a></li>
+        </ul>
       </div>
+      <div class="drawer-content">
+        <!-- Navbar -->
+        <header class="bg-base-100">
+          <div class="max-w-3xl m-auto">
+            <nav class="navbar">
+              <div class="navbar-start">
+                <a class="btn btn-ghost normal-case text-xl" href="/" style="font-family: 'Cinzel', sans-serif;">
+                  EpilentiO
+                </a>
+              </div>
+              <div class="navbar-end">
+                <ul class="menu menu-horizontal items-center">
+                  <li>
+                    <details>
+                      <summary>
+                        <svg class="icon" viewBox="0 0 24 24">
+                          <use href="/images/icons.svg#language"></use>
+                        </svg>
+                        <span class="lang-label" data-lang="de">DE</span>
+                        <span class="lang-label" data-lang="en">EN</span>
+                        <span class="lang-label" data-lang="es">ES</span>
+                        <span class="lang-label" data-lang="hr">HR</span>
+                      </summary>
+                      <ul class="bg-base-200">
+                        <li><a class="lang-link" data-lang="en" href="#">English</a></li>
+                        <li><a class="lang-link" data-lang="hr" href="#">Hrvatski</a></li>
+                      </ul>
+                    </details>
+                  </li>
+                  <li>
+                    <label class="swap swap-rotate h-full items-center">
+                      <input id="themeController" onclick="saveThemeState()" type="checkbox" class="theme-controller" value="nord" />
+                      <svg class="swap-on icon" viewBox="0 0 24 24">
+                        <use href="/images/icons.svg#moon"></use>
+                      </svg>
+                      <svg class="swap-off icon" viewBox="0 0 24 24">
+                       <use href="/images/icons.svg#sun"></use>
+                      </svg>
+                    </label>
+                  </li>
+                  <li>
+                    <label for="nav-drawer" class="btn btn-ghost btn-square">
+                      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                      </svg>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </header>
 
-      <footer
-        class="footer sm:footer-horizontal bg-base-100 max-w-2xl m-auto px-4 mb-4"
-      >
-        <aside>
-          <h6 class="footer-title">Company</h6>
-          <section class="legal-information">
-            <h2 class="text-xl">Epilentio d.o.o.</h2>
-            <address>
-              Put Sv. Roka 56 D <br />
-              21315 Sumpetar-Jesenice<br />
-              Croatia (HR)
-            </address>
-            <p>
-              VAT ID: HR 349 332 839 65<br />
-              <span class="inline-flex items-center align-middle">
-                OIB (Company ID): 349 332 839 65
-                <span class="tooltip tooltip-top" id="copy-tooltip" data-tip="Copy">
-                  <button
-                    class="btn btn-ghost btn-xs btn-square"
-                    onclick="copyToClipboard('34933283965', this)"
-                  >
-                    <svg class="copy-icon icon" viewBox="0 0 24 24">
-                      <use href="/images/icons.svg#copy-to-clipboard"></use>
-                    </svg>
-                    <svg class="copy-icon-success icon hidden text-success" viewBox="0 0 24 24">
-                      <use href="/images/icons.svg#copy-to-clipboard-success"></use>
-                    </svg>
-                  </button>
-                </span>
-              </span><br />
-            </p>
-          </section>
-        </aside>
-        <nav>
-          <h6 class="footer-title">Contact us</h6>
-          <a
-            href="mailto:petricevic@epilentio.hr"
-            class="text-sm flex items-center gap-1"
-          >
-            <svg class="icon" viewBox="0 0 24 24">
-              <use href="/images/icons.svg#envelope"></use>
-            </svg>
-            petricevic@epilentio.hr
-          </a>
-        </nav>
-      </footer>
-      <footer class="footer footer-center text-neutral-content p-4">
-        <p>Copyright © 2019 - 2026 - All right reserved by Epilentio d.o.o.</p>
-      </footer>
+        <!-- Main content -->
+        <main>
+          <div class="max-w-2xl m-auto">
+            <div id="content" class="px-4 md:px-0">
+            </div>
+          </div>
+        </main>
+        <div class="max-w-2xl m-auto">
+          <div class="divider"></div>
+        </div>
+
+        <footer
+          class="footer sm:footer-horizontal bg-base-100 max-w-2xl m-auto px-4 mb-4"
+        >
+          <aside>
+            <h6 class="footer-title">Company</h6>
+            <section class="legal-information">
+              <h2 class="text-xl">Epilentio d.o.o.</h2>
+              <address>
+                Put Sv. Roka 56 D <br />
+                21315 Sumpetar-Jesenice<br />
+                Croatia (HR)
+              </address>
+              <p>
+                VAT ID: HR 349 332 839 65<br />
+                <span class="inline-flex items-center align-middle">
+                  OIB (Company ID): 349 332 839 65
+                  <span class="tooltip tooltip-top" id="copy-tooltip" data-tip="Copy">
+                    <button
+                      class="btn btn-ghost btn-xs btn-square"
+                      onclick="copyToClipboard('34933283965', this)"
+                    >
+                      <svg class="copy-icon icon" viewBox="0 0 24 24">
+                        <use href="/images/icons.svg#copy-to-clipboard"></use>
+                      </svg>
+                      <svg class="copy-icon-success icon hidden text-success" viewBox="0 0 24 24">
+                        <use href="/images/icons.svg#copy-to-clipboard-success"></use>
+                      </svg>
+                    </button>
+                  </span>
+                </span><br />
+              </p>
+            </section>
+          </aside>
+          <nav>
+            <h6 class="footer-title">Contact us</h6>
+            <a
+              href="mailto:petricevic@epilentio.hr"
+              class="text-sm flex items-center gap-1"
+            >
+              <svg class="icon" viewBox="0 0 24 24">
+                <use href="/images/icons.svg#envelope"></use>
+              </svg>
+              petricevic@epilentio.hr
+            </a>
+          </nav>
+        </footer>
+        <footer class="footer footer-center text-neutral-content p-4">
+          <p>Copyright © 2019 - 2026 - All right reserved by Epilentio d.o.o.</p>
+        </footer>
+      </div>
+    </div>
   </body>
 </html>
