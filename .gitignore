@@ -1,5 +1,6 @@
 _cache
 result
 .direnv
+.envrc
 build
 .soupault-cache
