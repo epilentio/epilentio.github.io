@@ -14,10 +14,15 @@
     <link rel="preload" href="/images/icons.svg" as="image" type="image/svg+xml">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" >
     <link rel="stylesheet" type="text/css" href="/css/syntax.css" >
-    <!-- Matomo -->
-    <script src="/js/analytics.js"></script>
-    <script src="https://analytics.marijan.pro/matomo.js" async defer></script>
-    <!-- End Matomo Code -->
+    <script
+      src="/js/analytics.js"
+      data-site-id="3"
+      data-matomo-url="https://analytics.marijan.pro/"
+      data-consent-key="analyticsConsent"
+      data-consent-version="1"
+      data-consent-expiry-days="180"
+      defer
+    ></script>
     <script src="/js/theme-state.js"></script>
     <script src="/js/lang-switcher.js" defer></script>
     <script src="/js/copy-to-clipboard.js"></script>
@@ -144,11 +149,57 @@
               petricevic@epilentio.hr
             </a>
           </nav>
+          <nav>
+            <h6 class="footer-title">
+              <span class="language-copy" data-language-copy="en">Information</span>
+              <span class="language-copy" data-language-copy="hr">Informacije</span>
+            </h6>
+            <a class="link link-hover language-copy" data-language-copy="en" href="/legal-information/">Legal information</a>
+            <a class="link link-hover language-copy" data-language-copy="hr" href="/hr/pravne-informacije/">Pravne informacije</a>
+            <a class="link link-hover language-copy" data-language-copy="en" href="/privacy/">Privacy notice</a>
+            <a class="link link-hover language-copy" data-language-copy="hr" href="/hr/privacy/">Obavijest o privatnosti</a>
+            <button type="button" class="link link-hover text-left" data-analytics-consent-open>
+              <span class="language-copy" data-language-copy="en">Cookie settings</span>
+              <span class="language-copy" data-language-copy="hr">Postavke kolačića</span>
+            </button>
+          </nav>
         </footer>
         <footer class="footer footer-center text-neutral-content p-4">
           <p>Copyright © 2019 - 2026 - All rights reserved by Epilentio d.o.o.</p>
         </footer>
       </div>
     </div>
+    <section
+      class="fixed inset-x-3 bottom-3 z-50 mx-auto max-w-2xl rounded-box border border-base-300 bg-base-100 p-5 shadow-2xl sm:inset-x-6 sm:p-6"
+      data-analytics-consent
+      role="region"
+      aria-labelledby="analytics-consent-title"
+      aria-describedby="analytics-consent-description"
+      aria-live="polite"
+      hidden
+    >
+      <div class="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+        <div class="max-w-xl">
+          <h2 id="analytics-consent-title" class="text-lg font-bold">
+            <span class="language-copy" data-language-copy="en">Analytics cookies</span>
+            <span class="language-copy" data-language-copy="hr">Analitički kolačići</span>
+          </h2>
+          <p id="analytics-consent-description" class="mt-2 text-sm leading-relaxed opacity-80">
+            <span class="language-copy" data-language-copy="en">May we use analytics cookies to understand how this site is used? <a class="link" href="/privacy/">More information</a>.</span>
+            <span class="language-copy" data-language-copy="hr">Smijemo li koristiti analitičke kolačiće kako bismo vidjeli kako se stranica koristi? <a class="link" href="/hr/privacy/">Više informacija</a>.</span>
+          </p>
+        </div>
+        <div class="flex shrink-0 flex-wrap gap-2">
+          <button type="button" class="btn btn-neutral btn-sm" data-analytics-consent-action="rejected">
+            <span class="language-copy" data-language-copy="en">No, thanks</span>
+            <span class="language-copy" data-language-copy="hr">Ne, hvala</span>
+          </button>
+          <button type="button" class="btn btn-primary btn-sm" data-analytics-consent-action="accepted">
+            <span class="language-copy" data-language-copy="en">Allow analytics</span>
+            <span class="language-copy" data-language-copy="hr">Dopusti analitiku</span>
+          </button>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

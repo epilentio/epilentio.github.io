@@ -4,6 +4,11 @@
 site_url = soupault_config["custom_options"]["site_url"]
 languages = config["languages"]
 default_lang = config["default_lang"]
+path_overrides = config["path_overrides"] or {}
+
+function localized_path(path)
+  return path_overrides[path] or path
+end
 
 -- Extract the current language from the URL
 current_lang = default_lang
@@ -51,9 +56,9 @@ if head then
     HTML.set_attribute(link, "rel", "alternate")
     HTML.set_attribute(link, "hreflang", lang)
     if lang == default_lang then
-      HTML.set_attribute(link, "href", site_url .. relative_path)
+      HTML.set_attribute(link, "href", site_url .. localized_path(relative_path))
     else
-      HTML.set_attribute(link, "href", site_url .. "/" .. lang .. relative_path)
+      HTML.set_attribute(link, "href", site_url .. localized_path("/" .. lang .. relative_path))
     end
     HTML.append_child(head, link)
     idx = idx + 1
@@ -62,6 +67,6 @@ if head then
   default_link = HTML.create_element("link")
   HTML.set_attribute(default_link, "rel", "alternate")
   HTML.set_attribute(default_link, "hreflang", "x-default")
-  HTML.set_attribute(default_link, "href", site_url .. relative_path)
+  HTML.set_attribute(default_link, "href", site_url .. localized_path(relative_path))
   HTML.append_child(head, default_link)
 end

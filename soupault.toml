@@ -97,5 +97,6 @@ widget = "extract-canonical"
 
 [widgets.i18n]
 widget = "i18n"
-languages = ["en", "es", "hr", "de"]
+languages = ["en", "hr"]
 default_lang = "en"
+path_overrides = { "/hr/legal-information/" = "/hr/pravne-informacije/", "/pravne-informacije/" = "/legal-information/" }
