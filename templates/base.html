@@ -24,7 +24,6 @@
       defer
     ></script>
     <script src="/js/theme-state.js"></script>
-    <script src="/js/lang-switcher.js" defer></script>
     <script src="/js/copy-to-clipboard.js"></script>
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-XSS-Protection" content="1; mode=block">
@@ -33,11 +32,20 @@
     <div class="drawer drawer-end">
       <input id="nav-drawer" type="checkbox" class="drawer-toggle" />
       <div class="drawer-side">
-        <label for="nav-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+        <label
+          for="nav-drawer"
+          class="drawer-overlay"
+          data-i18n-aria-label-en="Close navigation"
+          data-i18n-aria-label-hr="Zatvori navigaciju"
+        ></label>
         <ul class="menu bg-base-200 min-h-full w-64 p-4">
-          <li class="menu-title">Services</li>
-          <li><a href="/">Software Engineering</a></li>
-          <li><a href="/strategy">Digital Sovereignty & Strategy</a></li>
+          <li class="menu-title"><span data-language-copy="en">Services</span><span data-language-copy="hr">Usluge</span></li>
+          <li>
+            <a data-i18n-route="home"><span data-language-copy="en">Software Engineering</span><span data-language-copy="hr">Razvoj softvera</span></a>
+          </li>
+          <li>
+            <a data-i18n-route="strategy"><span data-language-copy="en">Digital Sovereignty & Strategy</span><span data-language-copy="hr">Digitalni suverenitet i strategija</span></a>
+          </li>
         </ul>
       </div>
       <div class="drawer-content">
@@ -46,7 +54,7 @@
           <div class="max-w-3xl m-auto">
             <nav class="navbar">
               <div class="navbar-start">
-                <a class="btn btn-ghost normal-case text-xl" href="/" style="font-family: 'Cinzel', sans-serif;">
+                <a class="btn btn-ghost normal-case text-xl" data-i18n-route="home" style="font-family: 'Cinzel', sans-serif;">
                   EpilentiO
                 </a>
               </div>
@@ -54,23 +62,27 @@
                 <ul class="menu menu-horizontal items-center">
                   <li>
                     <details>
-                      <summary>
+                      <summary
+                        data-i18n-aria-label-en="Choose language"
+                        data-i18n-aria-label-hr="Odaberi jezik"
+                      >
                         <svg class="icon" viewBox="0 0 24 24">
                           <use href="/images/icons.svg#language"></use>
                         </svg>
-                        <span class="lang-label" data-lang="de">DE</span>
-                        <span class="lang-label" data-lang="en">EN</span>
-                        <span class="lang-label" data-lang="es">ES</span>
-                        <span class="lang-label" data-lang="hr">HR</span>
+                        <span data-language-copy="en">EN</span><span data-language-copy="hr">HR</span>
                       </summary>
                       <ul class="bg-base-200">
-                        <li><a class="lang-link" data-lang="en" href="#">English</a></li>
-                        <li><a class="lang-link" data-lang="hr" href="#">Hrvatski</a></li>
+                        <li><a data-i18n-language="en">English</a></li>
+                        <li><a data-i18n-language="hr">Hrvatski</a></li>
                       </ul>
                     </details>
                   </li>
                   <li>
-                    <label class="swap swap-rotate h-full items-center">
+                    <label
+                      class="swap swap-rotate h-full items-center"
+                      data-i18n-aria-label-en="Toggle color theme"
+                      data-i18n-aria-label-hr="Promijeni temu boja"
+                    >
                       <input id="themeController" onclick="saveThemeState()" type="checkbox" class="theme-controller" value="nord" />
                       <svg class="swap-on icon" viewBox="0 0 24 24">
                         <use href="/images/icons.svg#moon"></use>
@@ -81,7 +93,12 @@
                     </label>
                   </li>
                   <li>
-                    <label for="nav-drawer" class="btn btn-ghost btn-square">
+                    <label
+                      for="nav-drawer"
+                      class="btn btn-ghost btn-square"
+                      data-i18n-aria-label-en="Open navigation"
+                      data-i18n-aria-label-hr="Otvori navigaciju"
+                    >
                       <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
                       </svg>
@@ -108,22 +125,33 @@
           class="footer sm:footer-horizontal bg-base-100 max-w-2xl m-auto px-4 mb-4"
         >
           <aside>
-            <h6 class="footer-title">Company</h6>
+            <h6 class="footer-title"><span data-language-copy="en">Company</span><span data-language-copy="hr">Društvo</span></h6>
             <section class="legal-information">
               <h2 class="text-xl">Epilentio d.o.o.</h2>
               <address>
                 Put Sv. Roka 56 D <br />
                 21315 Sumpetar (Jesenice)<br />
-                Croatia (HR)
+                <span data-language-copy="en">Croatia (HR)</span><span data-language-copy="hr">Hrvatska (HR)</span>
               </address>
               <p>
-                VAT ID: HR 349 332 839 65<br />
+                <span data-language-copy="en">VAT ID: HR 349 332 839 65</span><span data-language-copy="hr">PDV ID: HR 349 332 839 65</span><br />
                 <span class="inline-flex items-center align-middle">
-                  OIB (Company ID): 349 332 839 65
-                  <span class="tooltip tooltip-top" id="copy-tooltip" data-tip="Copy">
+                  <span data-language-copy="en">OIB (Company ID): 349 332 839 65</span><span data-language-copy="hr">OIB: 349 332 839 65</span>
+                  <span
+                    class="tooltip tooltip-top"
+                    id="copy-tooltip"
+                    data-i18n-data-tip-en="Copy to clipboard"
+                    data-i18n-data-tip-hr="Kopiraj"
+                    data-i18n-copy-label-en="Copy to clipboard"
+                    data-i18n-copy-label-hr="Kopiraj"
+                    data-i18n-copied-label-en="Copied!"
+                    data-i18n-copied-label-hr="Kopirano!"
+                  >
                     <button
                       class="btn btn-ghost btn-xs btn-square"
                       onclick="copyToClipboard('34933283965', this)"
+                      data-i18n-aria-label-en="Copy OIB to clipboard"
+                      data-i18n-aria-label-hr="Kopiraj OIB"
                     >
                       <svg class="copy-icon icon" viewBox="0 0 24 24">
                         <use href="/images/icons.svg#copy-to-clipboard"></use>
@@ -138,7 +166,7 @@
             </section>
           </aside>
           <nav>
-            <h6 class="footer-title">Contact us</h6>
+            <h6 class="footer-title"><span data-language-copy="en">Contact us</span><span data-language-copy="hr">Kontakt</span></h6>
             <a
               href="mailto:petricevic@epilentio.hr"
               class="text-sm flex items-center gap-1"
@@ -150,22 +178,16 @@
             </a>
           </nav>
           <nav>
-            <h6 class="footer-title">
-              <span class="language-copy" data-language-copy="en">Information</span>
-              <span class="language-copy" data-language-copy="hr">Informacije</span>
-            </h6>
-            <a class="link link-hover language-copy" data-language-copy="en" href="/legal-information/">Legal information</a>
-            <a class="link link-hover language-copy" data-language-copy="hr" href="/hr/pravne-informacije/">Pravne informacije</a>
-            <a class="link link-hover language-copy" data-language-copy="en" href="/privacy/">Privacy notice</a>
-            <a class="link link-hover language-copy" data-language-copy="hr" href="/hr/privacy/">Obavijest o privatnosti</a>
+            <h6 class="footer-title"><span data-language-copy="en">Information</span><span data-language-copy="hr">Informacije</span></h6>
+            <a class="link link-hover" data-language-copy="en" data-i18n-route="legal">Legal information</a><a class="link link-hover" data-language-copy="hr" data-i18n-route="legal">Pravne informacije</a>
+            <a class="link link-hover" data-language-copy="en" data-i18n-route="privacy">Privacy notice</a><a class="link link-hover" data-language-copy="hr" data-i18n-route="privacy">Obavijest o privatnosti</a>
             <button type="button" class="link link-hover text-left" data-analytics-consent-open>
-              <span class="language-copy" data-language-copy="en">Cookie settings</span>
-              <span class="language-copy" data-language-copy="hr">Postavke kolačića</span>
+              <span data-language-copy="en">Cookie settings</span><span data-language-copy="hr">Postavke kolačića</span>
             </button>
           </nav>
         </footer>
         <footer class="footer footer-center text-neutral-content p-4">
-          <p>Copyright © 2019 - 2026 - All rights reserved by Epilentio d.o.o.</p>
+          <p><span data-language-copy="en">Copyright © 2019 - 2026 - All rights reserved by Epilentio d.o.o.</span><span data-language-copy="hr">Copyright © 2019. - 2026. - Sva prava pridržava Epilentio d.o.o.</span></p>
         </footer>
       </div>
     </div>
@@ -181,22 +203,18 @@
       <div class="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
         <div class="max-w-xl">
           <h2 id="analytics-consent-title" class="text-lg font-bold">
-            <span class="language-copy" data-language-copy="en">Analytics cookies</span>
-            <span class="language-copy" data-language-copy="hr">Analitički kolačići</span>
+            <span data-language-copy="en">Analytics cookies</span><span data-language-copy="hr">Analitički kolačići</span>
           </h2>
           <p id="analytics-consent-description" class="mt-2 text-sm leading-relaxed opacity-80">
-            <span class="language-copy" data-language-copy="en">May we use analytics cookies to understand how this site is used? <a class="link" href="/privacy/">More information</a>.</span>
-            <span class="language-copy" data-language-copy="hr">Smijemo li koristiti analitičke kolačiće kako bismo vidjeli kako se stranica koristi? <a class="link" href="/hr/privacy/">Više informacija</a>.</span>
+            <span data-language-copy="en">May we use analytics cookies to understand how this site is used? <a class="link" data-i18n-route="privacy">More information</a>.</span><span data-language-copy="hr">Smijemo li koristiti analitičke kolačiće kako bismo vidjeli kako se stranica koristi? <a class="link" data-i18n-route="privacy">Više informacija</a>.</span>
           </p>
         </div>
         <div class="flex shrink-0 flex-wrap gap-2">
           <button type="button" class="btn btn-neutral btn-sm" data-analytics-consent-action="rejected">
-            <span class="language-copy" data-language-copy="en">No, thanks</span>
-            <span class="language-copy" data-language-copy="hr">Ne, hvala</span>
+            <span data-language-copy="en">No, thanks</span><span data-language-copy="hr">Ne, hvala</span>
           </button>
           <button type="button" class="btn btn-primary btn-sm" data-analytics-consent-action="accepted">
-            <span class="language-copy" data-language-copy="en">Allow analytics</span>
-            <span class="language-copy" data-language-copy="hr">Dopusti analitiku</span>
+            <span data-language-copy="en">Allow analytics</span><span data-language-copy="hr">Dopusti analitiku</span>
           </button>
         </div>
       </div>

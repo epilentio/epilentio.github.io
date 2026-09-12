@@ -97,6 +97,22 @@ widget = "extract-canonical"
 
 [widgets.i18n]
 widget = "i18n"
+after = "extract-canonical"
 languages = ["en", "hr"]
 default_lang = "en"
-path_overrides = { "/hr/legal-information/" = "/hr/pravne-informacije/", "/pravne-informacije/" = "/legal-information/" }
+
+[widgets.i18n.routes.home]
+en = "/"
+hr = "/hr/"
+
+[widgets.i18n.routes.strategy]
+en = "/strategy/"
+hr = "/hr/strategy/"
+
+[widgets.i18n.routes.privacy]
+en = "/privacy/"
+hr = "/hr/privacy/"
+
+[widgets.i18n.routes.legal]
+en = "/legal-information/"
+hr = "/hr/pravne-informacije/"

@@ -8,18 +8,6 @@
 .icon {
   height: 1.25em;
 }
-.lang-link.selected {
-  font-weight: bold;
-}
-
-.language-copy {
-  display: none;
-}
-
-html:lang(en) .language-copy[data-language-copy="en"],
-html:lang(hr) .language-copy[data-language-copy="hr"] {
-  display: inline;
-}
 /* cinzel-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */

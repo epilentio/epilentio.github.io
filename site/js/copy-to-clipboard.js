@@ -5,12 +5,12 @@ function copyToClipboard(textToCopy, buttonElement) {
       const copyIcon = buttonElement.querySelector('.copy-icon');
       const checkIcon = buttonElement.querySelector('.copy-icon-success');
 
-      tooltip.setAttribute('data-tip', 'Copied!');
+      tooltip.setAttribute('data-tip', tooltip.dataset.copiedLabel);
       copyIcon.classList.add('hidden');
       checkIcon.classList.remove('hidden');
 
       setTimeout(() => {
-        tooltip.setAttribute('data-tip', 'Copy to clipboard');
+        tooltip.setAttribute('data-tip', tooltip.dataset.copyLabel);
         copyIcon.classList.remove('hidden');
         checkIcon.classList.add('hidden');
       }, 2000);
